@@ -7,6 +7,7 @@ export const Folder = (props) => {
   }
 
   const [currentTab, setCurrentTab] = useState(0);
+  const folder = props.folders[currentTab];
   return (
     <section className="tabs-section">
       <h1>Tabs</h1>
@@ -17,7 +18,7 @@ export const Folder = (props) => {
           selectTab={selectTab}
         />
         <div className='tab-content'>
-          {props.folders.content}
+          {folder.content}
         </div>
       </div>
     </section>
